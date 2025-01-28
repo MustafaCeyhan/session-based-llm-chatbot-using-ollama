@@ -7,15 +7,13 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain.memory import ConversationBufferMemory
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI 
 from datetime import datetime
 import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 # Load environment variables
-#_ = load_dotenv()
+
 app = FastAPI()
 
 app.add_middleware(
